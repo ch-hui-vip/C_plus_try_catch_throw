@@ -1,0 +1,33 @@
+https://blog.csdn.net/fengbingchun/article/details/65939258
+https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm 
+
+1. C++异常是指在程序运行时发生的反常行为，这些行为超出了函数正常功能的范围。
+    当程序的某部分检测到一个它无法处理的问题时，需要用到异常处理。异常提供了一种转移程序控制权的方式。
+    C++异常处理涉及到三个关键字：try、catch、throw。
+2. 在C++语言中，异常处理包括：
+    (1)、throw表达式：异常检测部分使用throw表达式来表示它遇到了无法处理的问题，throw引发了异常。
+    throw表达式包含关键字throw和紧随其后的一个表达式，其中表达式的类型就是抛出的异常类型。
+    throw表达式后面通常紧跟一个分号，从而构成一条表达式语句。
+    (2)、try语句块：异常处理部分使用try语句块处理异常。
+    try语句块以关键字try开始，并以一个或多个catch子句结束。
+    try语句块中代码抛出的异常通常会被某个catch子句处理。因为catch子句处理异常，所以它们也被称作异常处理代码。
+    catch子句包括三部分：关键字catch、括号内一个(可能未命名的)对象的声明(称作异常声明，exception  declaration)以及一个块。
+    当选中了某个catch子句处理异常之后，执行与之对应的块。catch一旦完成，程序跳转到try语句块最后一个catch子句之后的那条语句继续执行。try语句块声明的变量在块外部无法访问，特别是在catch子句内也无法访问。
+    如果一段程序没有try语句块且发生了异常，系统会调用terminate函数并终止当前程序的执行。
+    (3)、一套异常类(exception class)：用于在throw表达式和相关的catch子句之间传递异常的具体信息。
+    C++标准库定义了一组类，用于报告标准库函数遇到的问题。这些异常类也可以在用户编写的程序中使用，它们分别定义在4个头文件中：
+
+(1)、exception头文件定义了最通常的异常类exception，它只报告异常的发生，不提供任何额外的信息。
+(2)、stdexcept头文件定义了几种常用的异常类，如下(《C++ Primer(Fifth Edition)》)：
+(3)、new头文件定义了bad_alloc异常类型。
+(4)、type_info头文件定义了bad_cast异常类型。
+
+    
+————————————————
+版权声明：本文为CSDN博主「fengbingchun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/fengbingchun/article/details/65939258
+    
+    
+    
+    
+    这个头的意思是什么(virtual const char * what()const throw())？
