@@ -22,7 +22,8 @@ https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm
 (3)、new头文件定义了bad_alloc异常类型。
 (4)、type_info头文件定义了bad_cast异常类型。
 
-    
+
+
 ————————————————
 版权声明：本文为CSDN博主「fengbingchun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/fengbingchun/article/details/65939258
@@ -30,4 +31,21 @@ https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm
     
     
     
-    这个头的意思是什么(virtual const char * what()const throw())？
+  重点问题回顾：
+  这个头的意思是什么(virtual const char * what()const throw())？
+    virtual
+没有添加任何内容,因为被覆盖的方法已经是虚拟的.你是对的,可以省略
+
+const char* what()
+一个名为what()的成员函数不需要参数,并返回一个指向const char的指针.
+
+const
+成员函数可以通过一个const指针或者这个类的实例引用或一个派生类来调用.
+
+throw()
+没有例外.
+
+在C/C++代码中,函数声明括号最后的const是什么意思,有什么用?
+如 int funca(int k) const;这里的const是什么意思,起什么作用?
+如果该函数是一个类的成员函数，则表示成员函数隐含传入的this指针为const指针（即指针的值不能修改！），决定了在该成员函数中，任意修改它所在的类的成员的操作都是不允许的（因为隐含了对this指针的const引用）。
+    
