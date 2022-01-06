@@ -45,6 +45,18 @@ const
 throw()
 没有例外.
 
+virtual
+Adds nothing, as the method being overridden is already virtual. You are correct: it can be omitted.
+
+const char* what()
+A member function named what() that takes no arguments and returns a pointer to const char.
+
+const
+The member function can be called via a const pointer or reference to an instance of this class or a derived class.
+
+throw()
+Throws no exceptions
+
 在C/C++代码中,函数声明括号最后的const是什么意思,有什么用?
 如 int funca(int k) const;这里的const是什么意思,起什么作用?
 如果该函数是一个类的成员函数，则表示成员函数隐含传入的this指针为const指针（即指针的值不能修改！），决定了在该成员函数中，任意修改它所在的类的成员的操作都是不允许的（因为隐含了对this指针的const引用）。
